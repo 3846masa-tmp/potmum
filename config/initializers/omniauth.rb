@@ -25,7 +25,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   # Slack
   if ENV['USE_SLACK']
     options = {
-      scope: 'identify,read',
+      scope: 'identity.basic,identity.team,identity.avatar',
       team: ENV['SLACK_TEAM_ID']
     }.select { |_, v| v.present? }
     provider :slack, ENV['SLACK_KEY'], ENV['SLACK_SECRET'], options

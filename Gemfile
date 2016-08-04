@@ -27,7 +27,9 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2',
     github: 'zquestz/omniauth-google-oauth2', ref: '69c3e91f158337a3804e5d69291085125aa55a7e' # multi domains
 gem 'omniauth-github'
-gem 'omniauth-slack'
+# gem 'omniauth-slack'
+gem 'omniauth-slack',
+    github: 'kmrshntr/omniauth-slack', ref: '8b2371150cf3d892750695cd88118f8b16db9d01' # sign in with slack
 gem 'omniauth-twitter'
 
 gem 'slack-api'
