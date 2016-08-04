@@ -1,4 +1,4 @@
-- page_title = "#{content_for?(:title) ? "#{yield(:title)} - " : ''}Potmum"
+- page_title = "#{content_for?(:title) ? "#{yield(:title)} - " : ''}#{GlobalSetting.site_title}"
 
 meta charset='utf-8'
 title = page_title
@@ -32,4 +32,4 @@ meta property='og:type' content='article'
 meta property='og:description' content=''
 meta property='og:url' content=request.url
 meta property='og:image' content="/themes/#{GlobalSetting.theme_name}/apple-touch-icon-180x180.png"
-meta property='og:site_name' content='Potmum'
+meta property='og:site_name' content='#{GlobalSetting.site_title}'

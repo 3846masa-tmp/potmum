@@ -3,6 +3,10 @@ module GlobalSetting
     ENV['PRIVATE_MODE'].to_i != 0
   end
 
+  def self.site_title
+    ENV['SITE_TITLE'] || 'Potmum'
+  end
+
   def self.root_url
     ENV['ROOT_URL'] || ''
   end
