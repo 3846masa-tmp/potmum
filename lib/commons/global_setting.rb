@@ -2,6 +2,10 @@ module GlobalSetting
   def self.private_mode?
     ENV['PRIVATE_MODE'].to_i != 0
   end
+  
+  def self.can_regist?
+    ENV['CAN_REGIST'].to_i != 0
+  end
 
   def self.site_title
     ENV['SITE_TITLE'] || 'Potmum'

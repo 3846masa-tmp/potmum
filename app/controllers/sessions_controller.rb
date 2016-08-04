@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       if user
         session[:user_id] = user.id
         redirect_to '/'
-      else
+      elsif GlobalSetting.can_regist?
         # アカウント新規登録画面へ
         session[:auth] = {
           provider: auth[:provider],
@@ -22,6 +22,8 @@ class SessionsController < ApplicationController
           info: { nickname: auth[:info][:nickname] }
         }
         redirect_to register_path
+      else
+        raise Errors::Forbidden
       end
     end
   end
